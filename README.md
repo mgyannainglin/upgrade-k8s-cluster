@@ -1,5 +1,12 @@
 ## Upgrade the kubernetes cluster with command
 ### Master node upgrade process
+
+#### Disable the sechudling on Control Plance node (master node).
+##### where ***master01*** is your master node name.
+
+```
+kubectl cordon master01
+```
 #### On the controlplane node,run the following commands:
 ##### This will update the package lists from the software repository.
 ```
@@ -28,6 +35,13 @@ systemctl restart kubelet
 ### Worker node upgrade process
 
 #### On the worker node,run the following commands:
+
+#### Disable the sechudling on worker node.
+##### where ***worker01*** is your worker node name.
+
+```
+kubectl cordon worker01
+```
 ##### This will update the package lists from the software repository.
 ```
 apt update
