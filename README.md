@@ -53,7 +53,14 @@ kubectl drain worker01 --ignore-daemonsets --force
 ```
 apt update
 ```
-
+#### This will install the kubeadm version 1.20
+```
+apt install kubeadm=1.20.0-00
+```
+#### This will upgrade kubernetes controlplane. Note that this can take a few minutes.
+```
+kubeadm upgrade node
+```
 #### This will update the kubelet with the version 1.20.
 ```
 apt install kubelet=1.20.0-00
