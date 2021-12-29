@@ -20,7 +20,7 @@ apt update
 ```
 apt install kubeadm=1.20.0-00
 ```
-#### #This will upgrade kubernetes controlplane. Note that this can take a few minutes.
+#### This will upgrade kubernetes controlplane. Note that this can take a few minutes.
 ```
 kubeadm upgrade apply v1.20.0
 ```
