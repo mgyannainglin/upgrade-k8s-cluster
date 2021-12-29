@@ -7,6 +7,9 @@
 ```
 kubectl cordon master01
 ```
+```
+kubectl drain master01 --ignore-daemonsets --force
+```
 #### On the controlplane node,run the following commands:
 ##### This will update the package lists from the software repository.
 ```
@@ -41,6 +44,10 @@ systemctl restart kubelet
 
 ```
 kubectl cordon worker01
+```
+
+```
+kubectl drain worker01 --ignore-daemonsets --force
 ```
 ##### This will update the package lists from the software repository.
 ```
